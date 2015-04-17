@@ -1,0 +1,44 @@
+.slider {
+	margin: 0 auto;
+	width: 600px;
+}
+.slider__inner {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+.slider__inner li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.slider__cap {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 50%;
+	text-align: center;
+	background: rgba(255, 255, 255, .5);
+	opacity: 0;
+	padding: 10px;
+	width: 60%;
+	transform: scale(1.5, 1.5);
+	transform: rotate(10deg);
+	transition: all .3s linear;
+}
+.slider__cap.is-sub {
+	top: 65%;
+	transform: rotate(-10deg);
+	transition: all .7s linear;
+}
+.is-active .slider__cap {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+.slider__inner img {
+	width: 100%;
+}
