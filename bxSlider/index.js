@@ -1,37 +1,53 @@
 $(function() {
-    var $slider      = $('.slider__inner');
+
+    /**************************************
+    * slider
+    ***************************************/
+    var $slider      = $('#slider-trigger');
     var $sliderLists = $slider.find('li');
     var CLASS        = 'is-active';
 
     /**
      * classを付け替える関数
-     * @param {object} $elm: $sliderListsに含まれるliをjqueryObjectとして渡す
+     * @param {object} $el: $sliderListsに含まれるliをjqueryObjectとして渡す
      */
-    function switchClass($elm) {
+    function switchClass($el) {
         /* Delete */
         $sliderLists.removeClass(CLASS);
         /* Add */
-        $elm.addClass(CLASS);
+        $el.addClass(CLASS);
     }
 
-    /* sliderのオプション */
-    var options = {
-        /* sliderが読み込まれたら */
-        onSliderLoad: function(currentIndex) {
-            var $elm = $($sliderLists[currentIndex]);
-            switchClass($elm);
-        },
-        /* sliderが完了したら */
-        onSlideAfter: function($elm, oldIndex, newIndex) {
-            switchClass($elm);
-        },
-        randomStart: true,
-        auto: true
-    };
+    /**
+     * slider
+     */
+    function slider() {
+        var option = {
+            /* sliderが読み込まれたら */
+            onSliderLoad: function(currentIndex) {
+                /* load後すぐに実行するとcssのtransitionと発動タイミングがずれることがあるためdelay */
+                setTimeout(function() {
+                    var $el = $($sliderLists[currentIndex]);
+                    switchClass($el);
+                }, 100);
+            },
+            /* sliderが完了したら */
+            onSlideAfter: function($el, oldIndex, newIndex) {
+                switchClass($el);
+                sl.startAuto();  // クリックしてもautoを止めない
+            },
+            responsive: false,
+            controls: false,
+            pause: 6000,
+            speed: 800,
+            auto: true
+        };
+        var sl = $slider.bxSlider(option);  // optionの後に定義すること
+    }
 
     /* コンテンツが読み込まれたら実行 */
     $(window).load(function() {
-        /* bxSlider実行 */
-        $('.slider__inner').bxSlider(options);
+        slider();
     });
+
 });
