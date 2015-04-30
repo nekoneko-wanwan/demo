@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Web Storageを使ったシンプルなフォーム</title>
+<script src="https://code.jquery.com/jquery-git2.min.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+
+<h1>Web Storageを使ったシンプルなフォーム</h1>
+
+<section>
+  <h2>動作</h2>
+  <ul>
+    <li>すでにStorage内にデータがあれば、valueに自動的に値が入る。</li>
+    <li>Storageデータは「現在のストレージデータ一覧」に表示される</li>
+    <li>すべて未入力でも空データがあれば、ストレージに空として追加される。<br>データ自体を消すには削除ボタンを押す</li>
+    <li>別タブなどで変更があった場合は、変更ログにその詳細が表示される。</li>
+  </ul>
+</section>
+
+<hr> <!-- ****************************** -->
+
+<section>
+  <h2>フォーム</h2>
+  <ul>
+    <li>名前：<input type="text" value="" id="user-name"><input type="text" disabled="disabled"></li>
+    <li>住所：<input type="text" value="" id="user-address"><input type="text" disabled="disabled"></li>
+    <li>電話：<input type="text" value="" id="user-tel"><input type="text" disabled="disabled"></li>
+    <li>メール：<input type="text" value="" id="user-mail"><input type="text" disabled="disabled"></li>
+    <li>FAX：<input type="text" value="" id="user-fax"><input type="text" disabled="disabled"></li>
+    <li>備考：<input type="text" value="" id="user-other"><input type="text" disabled="disabled"></li>
+  </ul>
+  <p><button id="saveBtn">更新を保存する</button> <button id="delete">削除する</button></p>
+</section>
+
+<hr><!-- ****************************** -->
+
+<section>
+  <h2>現在のストレージデータ一覧</h2>
+  <ul id="status"></ul>
+</section>
+
+<hr><!-- ****************************** -->
+
+<section>
+  <h2>別ウィンドウでの変更ログ</h2>
+  <ul id="changeLog"></ul>
+</section>
+
+
+
+
+</body>
+</html>
