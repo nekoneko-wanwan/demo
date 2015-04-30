@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>サークルメニュー</title>
+  <style>
+    body {padding: 0;margin: 0;}
+    ul, li {padding: 0;margin: 0; list-style: none;}
+    .circle {
+      margin-top: 100px;
+      position: relative;
+    }
+    .circle ul {
+      position: absolute;
+      left: 50%;
+      bottom: 3px;
+      margin-left: -20px;
+    }
+    .circle li {
+      color: #fff;
+      display: inline-block;
+      font-size: 16px;
+      background: #ccc;
+      text-align: center;
+
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all 0.3s 0;
+      /* 各liのdelayやdurationを変えると面白い表現に */
+    }
+    .circle a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .circle__trigger {
+      text-align: center;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .circle__trigger span {
+      /* color */
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      background: #333;
+
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      border-radius: 50%;
+      position: relative;
+      z-index: 10;
+    }
+    .circle.is-open li:nth-child(1) {
+      -moz-transform: translate(75px, 0px);
+      -ms-transform: translate(75px, 0px);
+      -webkit-transform: translate(75px, 0px);
+      transform: translate(75px, 0px);
+    }
+    .circle.is-open li:nth-child(2) {
+      -moz-transform: translate(60.67627px, 44.08389px);
+      -ms-transform: translate(60.67627px, 44.08389px);
+      -webkit-transform: translate(60.67627px, 44.08389px);
+      transform: translate(60.67627px, 44.08389px);
+    }
+    .circle.is-open li:nth-child(3) {
+      -moz-transform: translate(23.17627px, 71.32924px);
+      -ms-transform: translate(23.17627px, 71.32924px);
+      -webkit-transform: translate(23.17627px, 71.32924px);
+      transform: translate(23.17627px, 71.32924px);
+    }
+    .circle.is-open li:nth-child(4) {
+      -moz-transform: translate(-23.17627px, 71.32924px);
+      -ms-transform: translate(-23.17627px, 71.32924px);
+      -webkit-transform: translate(-23.17627px, 71.32924px);
+      transform: translate(-23.17627px, 71.32924px);
+    }
+    .circle.is-open li:nth-child(5) {
+      -moz-transform: translate(-60.67627px, 44.08389px);
+      -ms-transform: translate(-60.67627px, 44.08389px);
+      -webkit-transform: translate(-60.67627px, 44.08389px);
+      transform: translate(-60.67627px, 44.08389px);
+    }
+    .circle.is-open li:nth-child(6) {
+      -moz-transform: translate(-75px, 0.0px);
+      -ms-transform: translate(-75px, 0.0px);
+      -webkit-transform: translate(-75px, 0.0px);
+      transform: translate(-75px, 0.0px);
+    }
+    .circle.is-open li:nth-child(7) {
+      -moz-transform: translate(-60.67627px, -44.08389px);
+      -ms-transform: translate(-60.67627px, -44.08389px);
+      -webkit-transform: translate(-60.67627px, -44.08389px);
+      transform: translate(-60.67627px, -44.08389px);
+    }
+    .circle.is-open li:nth-child(8) {
+      -moz-transform: translate(-23.17627px, -71.32924px);
+      -ms-transform: translate(-23.17627px, -71.32924px);
+      -webkit-transform: translate(-23.17627px, -71.32924px);
+      transform: translate(-23.17627px, -71.32924px);
+    }
+    .circle.is-open li:nth-child(9) {
+      -moz-transform: translate(23.17627px, -71.32924px);
+      -ms-transform: translate(23.17627px, -71.32924px);
+      -webkit-transform: translate(23.17627px, -71.32924px);
+      transform: translate(23.17627px, -71.32924px);
+    }
+    .circle.is-open li:nth-child(10) {
+      -moz-transform: translate(60.67627px, -44.08389px);
+      -ms-transform: translate(60.67627px, -44.08389px);
+      -webkit-transform: translate(60.67627px, -44.08389px);
+      transform: translate(60.67627px, -44.08389px);
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>
+    $(function() {
+      $(".circle__trigger span").on("click",function(){
+        var val = $(this).text();
+        if(val === '+') {
+          $(this).text('-');
+        } else {
+          $(this).text('+');
+        }
+        $(".circle").toggleClass("is-open");
+
+        init();
+      });
+
+      /* 各liのdelayを変えてみる */
+      function makeRandom(max, min) {
+        // min ~ maxの値を返す
+        var max = max | 10;
+        var min = min | 0;
+        return Math.random() * (max - min) + min | 0;
+      }
+      function init() {
+        var len = $('.circle').find('li').length;
+        $('.circle').find('li').each(function(i) {
+          var randomNum = makeRandom(len);
+          $(this).css({
+            transitionDelay: '.' + randomNum + 's'  // iをrandomNumに変えると気持ち悪い
+          })
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+
+<h1>サークルメニュー</h1>
+
+
+<nav class="circle">
+  <ul>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li><a href="#">10</a></li>
+  </ul>
+  <p class="circle__trigger"><span>+</span></p>
+</nav>
+
+
+
+
+</body>
+</html>

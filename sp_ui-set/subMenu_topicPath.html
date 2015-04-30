@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>パンくず（自動省略機能）</title>
+  <style>
+    body {padding: 0;margin: 0;}
+    ul, ol, li {padding: 0;margin: 0; list-style: none;}
+    .topicPath {
+      margin: 10px 0;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .topicPath:after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+    .topicPath li {
+      padding: 6px;
+      float: left;
+      list-style: none;
+    }
+    .topicPath li a {
+      text-decoration: none;
+    }
+    .topicPath li a:after {
+      content: "\00003E";
+      color: #757575;
+      margin: 0 0 0 12px;
+      vertical-align: 1px;
+    }
+    .is-hide {
+      display: none;
+    }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>
+    $(function() {
+
+      var init = function() {
+        var $topicPath = $('.topicPath');
+        var $item;
+
+        var windowWidth    = $(window).outerWidth(true);
+        var topicPathWidth = getTopicPathWidth($topicPath);
+
+        var lastUrl = null;
+
+        $topicPath.find('li').removeClass('is-hide');
+        $topicPath.find('.js-omit').remove();
+
+        if(windowWidth < topicPathWidth) {
+          $topicPath.find('li').last().before('<li class="js-omit"><a href="'+ lastUrl + '">・・・</a></li>');
+
+          while(windowWidth < topicPathWidth) {
+            $item = $topicPath.find('li').filter(function() {
+              return !$(this).hasClass('is-hide');
+            });
+            lastUrl = $item.find('a').eq($item.find('a').length -2).attr('href');
+            $('js-ommit a').attr('href', lastUrl);
+
+            $item.eq($item.length - 3).addClass('is-hide');
+
+            topicPathWidth = getTopicPathWidth($topicPath);
+          }
+        }
+
+      }
+
+      var getTopicPathWidth = function(target) {
+        var total = 0;
+        target.find('li').filter(function() {
+          return !$(this).hasClass('is-hide');
+        }).each(function() {
+          total += $(this).outerWidth(true);
+        });
+        return total;
+      }
+
+      // 画面が回転・読み込まれた・リサイズされた時
+      var timer;
+      $(window).on('orientationchange load resize', function() {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          init();
+        }, 100);
+      });
+    });
+  </script>
+</head>
+<body>
+
+<h1>パンくず（自動省略機能）</h1>
+
+<ol class="topicPath">
+  <li><a href="#">ホーム</a></li>
+  <li><a href="#">カテゴリー</a></li>
+  <li><a href="#">カテゴリー</a></li>
+  <li><a href="#">カテゴリー</a></li>
+  <li><a href="#">カテゴリー</a></li>
+  <li><span>詳細ページ</span></li>
+</ol>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スプリングボード</title>
+  <style>
+    body {padding: 0;margin: 0;}
+    ul, li {padding: 0;margin: 0; list-style: none;}
+    a {text-decoration: none; color: #333;}
+    .board {
+      margin: 0 auto;
+      width: 290px;
+    }
+    .board__body {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+
+      margin-left: -10px;
+
+      display: -webkit-flex;
+      -webkit-flex-wrap: wrap;
+      -webkit-align-content: flex-start;
+    }
+    .board__item {
+      background-color: #333;
+      margin: 10px 0 0 10px;
+      width: 90px;
+    }
+    .board__item a {
+      padding: 10px 0;
+      display: block;
+    }
+    .board__icon {
+      background-color: #ccc;
+      display: block;
+      margin: 0 auto;
+      height: 50px;
+      margin-bottom: 5px;
+      width: 90%;
+    }
+    .board__label {
+      color: #fff;
+      display: block;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+
+<h1>スプリングボード（ラベルの高さが可変）</h1>
+
+<nav class="board">
+  <ul class="board__body">
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキストテキストテキストテキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキストテキストテキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキスト</span>
+      </a>
+    </li>
+    <li class="board__item">
+      <a href="#">
+        <span class="board__icon">アイコン</span>
+        <span class="board__label">テキスト</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- /.board -->
+
+
+
+
+
+</body>
+</html>
