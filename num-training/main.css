@@ -1,0 +1,32 @@
+body {
+    width: 100%;
+}
+#panel {
+    border-collapse: collapse;
+    margin: 50px auto 0;
+    table-layout: fixed;
+    width: 90%;
+}
+td {
+    border: 1px solid #999;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.is-active {
+    background-color: #ccc;
+    cursor: default;
+    /*font-weight: normal;*/
+    /*position: relative;*/
+}
+#replay {
+    margin-top: 50px;
+    text-align: center;
+}
+button {
+    font-size: 20px;
+    text-align: center;
+}
