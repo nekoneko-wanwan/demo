@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Font Awesomeの使い方</title>
+<link rel="stylesheet" href="common/css/style.css">
+<style>
+	div {margin: 1em 0;}
+	hr {margin: 2em 0;}
+	h2 {background: #eee;padding: .5em;}
+	span {color: red;}
+</style>
+</head>
+<body>
+
+<h1>Font Awesomeの使い方</h1>
+<p>ライセンスは商用個人問わずに、販売しなければ無料で使用できる<br/>著作権表示は必要だが、css内にコメントアウトで埋め込んでいればOK</p>
+
+<hr>
+
+<h2>アイコンを大きくする</h2>
+	<div><span class="fa fa-flag">普通に使う。タグは何でも良い</span></div>
+	<div><span class="fa fa-flag fa-lg"></span>fa-lgを付けると大きくなる。</div>
+	<div><span class="fa fa-flag fa-2x">classの中に入れれば文字ごと大きくなる</span>fa-2xでさらに大きく</div>
+	<div><span class="fa fa-flag fa-3x"></span>fa-3xでさらに大きく</div>
+	<div><span class="fa fa-flag fa-4x"></span>fa-4xでさらに大きく</div>
+	<div><span class="fa fa-flag fa-5x"></span>fa-5xでさらに大きく</div>
+
+
+<h2>アイコン表示幅を統一させる</h2>
+	<h3>何もしていない場合</h3>
+	<div><span class="fa fa-home"></span>ホーム</div>
+	<div><span class="fa fa-calendar"></span>スケジュール</div>
+	<div><span class="fa fa-github"></span>Github</div>
+	<div><span class="fa fa-cogs"></span>設定</div>
+
+	<h3>fa-fwを付けた場合</h3>
+	<div><span class="fa fa-home fa-fw"></span>ホーム</div>
+	<div><span class="fa fa-calendar fa-fw"></span>スケジュール</div>
+	<div><span class="fa fa-github fa-fw"></span>Github</div>
+	<div><span class="fa fa-cogs fa-fw"></span>設定</div>
+
+
+<h2>リストで使用する</h2>
+<p>ulにfa-ulを、liにfa-liを付ける</p>
+	<ul class="fa-ul">
+		<li><span class="fa fa-home fa-li"></span>ホーム</li>
+		<li><span class="fa fa-calendar fa-li"></span>スケジュール</li>
+		<li><span class="fa fa-github fa-li"></span>Github</li>
+		<li><span class="fa fa-cogs fa-li"></span>設定</li>
+	</ul>
+
+
+<h2>ボーダーで囲む</h2>
+	<div><span class="fa fa-flag fa-border"></span>fa-borderを付けるとボーダーで囲まれる</div>
+
+
+<h2>回り込み</h2>
+	<div style="width: 100px;">
+		<p class="fa fa-flag pull-left"></p>
+		<p>.pull-leftを付けると左側に回りこみを設定できる（アイコンを文字の外に出した方が分かりやすい）</p>
+	</div>
+	<div style="width: 100px;">
+		<p class="fa fa-flag pull-right"></p>
+		<p>.pull-rightを付けると左側に回りこみを設定できる</p>
+	</div>
+	<div style="width: 100px;">
+		<p class="fa fa-flag" style="margin:0;padding:0;"></p>
+		<p style="margin:0;padding:0;">何も付けないとこんなかんじになる</p>
+		<p class="fa fa-flag" style="margin:0;padding:0;"></p>
+	</div>
+
+
+<h2>角度と反転</h2>
+	<div><span class="fa fa-flag fa-rotate-90"></span>fa-rotate-Xで回転する（90）</div>
+	<div><span class="fa fa-flag fa-rotate-180"></span>fa-rotate-Xで回転する（180）</div>
+	<div><span class="fa fa-flag fa-flip-horizontal"></span>fa-flip-xxxで反転する（horizontal: 水平）</div>
+	<div><span class="fa fa-flag fa-flip-vertical "></span>fa-flip-xxxで反転する（vertical: 垂直）</div>
+
+
+<h2>回転アニメーション</h2>
+	<div><span class="fa fa-home fa-spin"></span>fa-spinを付けると回転する</div>
+
+
+<h2>アイコンを重ねる</h2>
+	<span class="fa-stack fa-2x">
+		<span class="fa fa-bomb fa-stack-2x"></span>
+		<span class="fa fa-apple fa-stack-1x fa-inverse"></span>
+	</span>
+	fa-bomb と fa-apple
+
+
+</body>
+</html>
