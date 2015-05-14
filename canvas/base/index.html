@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1 {
+			margin-top: 30px;
+		}
+		section {
+			float: left;
+			margin: 0 30px;
+		}
+		h2 {
+			text-align: center;
+		}
+		.clear {
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+
+<h1>単純な図形の描画</h1>
+<section>
+	<h2>lineTo</h2>
+	<canvas id="line" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>fillRect</h2>
+	<canvas id="rect1" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>strokeRect</h2>
+	<canvas id="rect2" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>clearRect</h2>
+	<canvas id="rect3" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>circle</h2>
+	<canvas id="circle" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>arc</h2>
+	<canvas id="arc1" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>arc: fill</h2>
+	<canvas id="arc2" width="140" height="140"></canvas>
+</section>
+
+
+
+<!-- /////////////////////////////////////////////////// -->
+<div class="clear"></div>
+<!-- /////////////////////////////////////////////////// -->
+
+
+
+<h1>色を塗る</h1>
+<section>
+	<h2>strokeStyle</h2>
+	<canvas id="fill1" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>fillStyle</h2>
+	<canvas id="fill2" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>fillStyle: opacity</h2>
+	<canvas id="fill3" width="140" height="140"></canvas>
+</section>
+
+
+
+
+<!-- /////////////////////////////////////////////////// -->
+<div class="clear"></div>
+<!-- /////////////////////////////////////////////////// -->
+
+
+
+<h1>グラデーション</h1>
+<section>
+	<h2>linearGradient: vertical</h2>
+	<canvas id="line-grad1" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>linearGradient: horizon</h2>
+	<canvas id="line-grad2" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>linearGradient: slash</h2>
+	<canvas id="line-grad3" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>RadialGradient</h2>
+	<canvas id="rad-grad1" width="140" height="140"></canvas>
+</section>
+
+
+<!-- /////////////////////////////////////////////////// -->
+<div class="clear"></div>
+<!-- /////////////////////////////////////////////////// -->
+
+
+
+<h1>画像の組み込み</h1>
+<section>
+	<h2>image</h2>
+	<canvas id="img1" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>trimming</h2>
+	<canvas id="trim" width="140" height="140"></canvas>
+</section>
+
+
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
