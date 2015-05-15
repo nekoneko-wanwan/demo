@@ -326,3 +326,36 @@ img1();
 trim();
 
 
+
+/*
+ * テキストを描く
+ * context.fillText(str, x, y)
+ * context.strokeText(str, x, y)
+ * context.fillStyle = 'color'
+ * context.font = 'normal normal 32px/40px san-serif'
+ * context.textBaseline = 'top'
+ * context.textAlign = 'left'
+ 
+ * fontプロパティはcssと同じ
+ *     context.font = "12px 'Times New Roman'";
+ *     context.font = "18px 'Monotype Corsiva'";
+ *     context.font = "italic bold 22px 'ＭＳ Ｐゴシック'";
+ *     context.font = "italic bold 26px 'HG正楷書体-PRO'";
+ */
+function text() {
+    var canvas = document.getElementById('text');
+    var context = canvas.getContext('2d');
+
+    context.font = 'normal normal 32px/40px san-serif';
+    context.fillText('ほげほげ', 0, 40);
+
+    context.font = "italic bold 26px 'HG正楷書体-PRO'";
+    context.fillText('fugafuga', 0, 80);
+
+    context.font = "italic bold 26px 'HG正楷書体-PRO'";
+    context.strokeText('moge', 0, 120);
+
+}
+
+text();
+
