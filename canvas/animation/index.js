@@ -186,3 +186,34 @@ function circle() {
 
 sine();
 circle();
+
+
+
+/*
+ * textのアニメーション
+ */
+
+function text() {
+    var cs  = document.getElementById('text');
+    var ctx = cs.getContext('2d');
+    var w   = cs.width;
+    var h   = cs.height;
+    var n = 0;
+
+    function render() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.font = '16px/2 sans-serif';
+        ctx.fillText('カウント: ' + n, 0, 50);
+        if(n === 9) {
+            n = 0;
+        } else {
+            n++;
+        }
+    }
+
+    setInterval(render, 1000);
+
+}
+
+text();
+
