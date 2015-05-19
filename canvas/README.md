@@ -20,3 +20,13 @@ canvasの動作テスト
 ##/root/effect/
 色々なエフェクトとか
 
+##/root/event/
+
+* click
+* double click
+* Canvas全体のmouse over / out
+* Canvas内の1要素のmouse over / out
+* mouse down / mouse up
+* mouse move
+* mouse wheel
+* key up / down
