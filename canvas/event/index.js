@@ -334,8 +334,9 @@ function k_up_down() {
         ctx.fillText(str, 10, 130);
     }
 
-    document.addEventListener('keydown', onKeyDown, false);
-    document.addEventListener('keyup', onKeyUp, false);
+    cs.setAttribute('tabindex', 0); // focusしている時のみ、keyDown,up を有効に
+    cs.addEventListener('keydown', onKeyDown, false);
+    cs.addEventListener('keyup', onKeyUp, false);
 }
 k_up_down();
 
