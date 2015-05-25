@@ -20,6 +20,9 @@ canvasの動作テスト
 ##/root/effect/
 色々なエフェクトとか
 
+* モザイクフェードアウト
+* 円形をマウスオーバーでぐにゃらせる
+
 ##/root/event/
 
 * click
@@ -30,3 +33,7 @@ canvasの動作テスト
 * mouse move
 * mouse wheel
 * key up / down
+
+##/root/loading/
+ローディングアニメーション
+※preloadJSを使用

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Loading animation</title>
+	<style>
+		h1 {
+			margin-top: 30px;
+		}
+		section {
+			float: left;
+			margin: 30px;
+		}
+		canvas {
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		h2 {
+			text-align: center;
+		}
+		.clear {
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+
+
+<h1>矩形でローディング</h1>
+<section>
+	<h2>line</h2>
+	<canvas id="rect_line" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>line reverse</h2>
+	<canvas id="rect_line2" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>bg</h2>
+	<canvas id="rect_bg" width="200" height="140"></canvas>
+</section>
+
+<section>
+	<h2>bg reverse</h2>
+	<canvas id="rect_bg2" width="140" height="200"></canvas>
+</section>
+
+<section>
+	<h2>alpha</h2>
+	<canvas id="alpha" width="140" height="140"></canvas>
+</section>
+
+<!-- /////////////////////////////////////////////////// -->
+<div class="clear"></div>
+<!-- /////////////////////////////////////////////////// -->
+
+
+<h1>円でローディング</h1>
+<section>
+	<h2>line</h2>
+	<canvas id="circle_line" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>fill</h2>
+	<canvas id="circle_fill" width="140" height="140"></canvas>
+</section>
+
+
+<!-- /////////////////////////////////////////////////// -->
+<div class="clear"></div>
+<!-- /////////////////////////////////////////////////// -->
+
+
+<h1>マスクでローディング</h1>
+<section>
+	<h2>mask</h2>
+	<canvas id="mask" width="140" height="140"></canvas>
+</section>
+
+<section>
+	<h2>mask2</h2>
+	<canvas id="mask2" width="140" height="140"></canvas>
+</section>
+
+
+
+
+<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+<script src="//code.createjs.com/preloadjs-0.6.1.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
