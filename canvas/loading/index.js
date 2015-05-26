@@ -246,14 +246,13 @@ function mask2(zero_point) {
 //--------------------------------------------------------------------------
 /* preloadJS */
 var preload = new createjs.LoadQueue();
-var zero_point = 0;
 
 // 同時接続数
 // preload.setMaxConnections(1);
 
 /* progress イベントを使用する */
 preload.on("progress", function(e) {
-    zero_point = (e.progress).toFixed(2);  // 0.01 ~ 1.00
+    var zero_point = (e.progress).toFixed(2);  // 0.01 ~ 1.00
 
     /* 各Canvasを実行 */
     rect_line(zero_point);
