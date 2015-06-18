@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* ここでの任意とは、値によってレイアウトや表現が変わるということ */
+/* ここでの必須とは円状のエフェクトを発生させるのに必須ということ */
+/* またプレフィックスは省略しているので注意 */
+
+.ripple {
+	/* 任意 */
+	margin: 20px;
+	background-color: #f7f7f7;
+	height: 100px;
+	width: 200px;
+	text-align: center;
+	line-height: 100px;
+	cursor: pointer;
+
+	/* 必須 */
+	overflow: hidden;
+	position: relative;
+}
+
+.ripple__effect {
+	/* 任意 */
+	width: 150px;
+	height: 150px;
+
+	/* 必須 */
+	position: absolute;
+	border-radius: 100%;
+	pointer-events: none;
+	transform: scale(0);
+	opacity: 0;
+}
+.ripple__effect.is-orange {
+	/* 任意 */
+	background: #f1c40f;
+}
+.ripple__effect.is-blue {
+	/* 任意 */
+	background: #4aa3df;
+}
+.ripple__effect.is-black {
+	/* 任意 */
+	background: #999;
+}
+
+.ripple__effect.is-show {
+	/* 必須 */
+	animation: ripple 0.75s ease-out;
+}
+@keyframes ripple {
+	/* 必須 */
+	from {
+		opacity: 1;
+	}
+	to {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
