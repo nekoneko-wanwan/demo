@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.contents {
+	margin: 0 auto;
+	width: 700px;
+}
+section {
+	border-bottom: 2px dashed #ccc;
+	padding-bottom: 30px;
+	margin: 30px auto;
+}
+.note {
+	color: red;
+	font-size: 80%;
+}
+.note2 {
+	margin: 1em 0;
+	font-size: 90%;
+	color: #666;
+}
+
+pre {
+	font-size: 110%;
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 1em;
+}
+.add {
+	color: blue;
+}
+button {
+	margin-bottom: 1em;
+	padding: 5px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	margin-left: 2em;
+	padding: 0;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+.addDiv {
+	margin-left: 1em;
+	color: blue;
+}
+.p {
+	margin-left: 1em;
+	color: #000;
+}

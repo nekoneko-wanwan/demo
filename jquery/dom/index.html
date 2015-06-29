@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>DOM要素追加メソッドまとめ</title>
+<link rel="stylesheet" href="main.css">
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+
+<h1>jQuery DOM要素追加メソッドまとめ</h1>
+
+
+<div class="contents">
+	<ul class="note">
+		<li>- ここで実際に実行しているhtml/jsコードと、表示しているものは異なります。</li>
+		<li>- コードベースで確認できるように作成しているため、実際のソースコードは参考になりません。</li>
+		<li>- またメソッドの引数にfunction()を渡すことでindex番号などを得られるものもあります。</li>
+	</ul>
+
+
+	<section>
+		<h2>append()</h2>
+		<pre>$('ul').append('&lt;li&gt;追加されました&lt;/li&gt;');</pre>
+		<button id="method-append">append()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>appendTo()</h2>
+		<pre>$('&lt;li&gt;追加されました&lt;/li&gt;').appendTo('ul');</pre>
+		<button id="method-appendTo">appendTo()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>prepend()</h2>
+		<pre>$('ul').prepend('&lt;li&gt;追加されました&lt;/li&gt;');</pre>
+		<button id="method-prepend">prepend()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>prependTo()</h2>
+		<pre>$('&lt;li&gt;追加されました&lt;/li&gt;').prependTo('ul');</pre>
+		<button id="method-prependTo">prependTo()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+
+	<section>
+		<h2>after()</h2>
+		<pre>$('ul').after('&lt;p&gt;追加されました&lt;/p&gt;');</pre>
+		<button id="method-after">after()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>insertAfter()</h2>
+		<pre>$('&lt;p&gt;追加されました&lt;/p&gt;').insertAfter('ul');</pre>
+		<button id="method-insertAfter">insertAfter()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>before()</h2>
+		<pre>$('ul').before('&lt;p&gt;追加されました&lt;/p&gt;');</pre>
+		<button id="method-before">before()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>insertBefore()</h2>
+		<pre>$('&lt;p&gt;追加されました&lt;/p&gt;').insertBefore('ul');</pre>
+		<button id="method-insertBefore">insertBefore()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;リスト1&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト2&lt;/li&gt;</li>
+			<li>&lt;li&gt;リスト3&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>wrap()</h2>
+		<pre>$('p').wrap('&lt;div /&gt;');</pre>
+		<button id="method-wrap">wrap()</button>
+		<div class="wrap">
+			<p class="p">&lt;p&gt;要素1&lt;/p&gt;</p>
+			<p class="p">&lt;p&gt;要素2&lt;/p&gt;</p>
+			<p class="p">&lt;p&gt;要素&lt;/p&gt;</p>
+		</div>
+	</section>
+
+	<section>
+		<h2>wrapInner()</h2>
+		<pre>$('li').wrapInner('&lt;span /&gt;');</pre>
+		<button id="method-wrapInner">wrapInner()</button>
+		<div class="dmy-start">&lt;ul&gt;</div>
+		<ul>
+			<li>&lt;li&gt;<span class="dmy">リスト1</span>&lt;/li&gt;</li>
+			<li>&lt;li&gt;<span class="dmy">リスト2</span>&lt;/li&gt;</li>
+			<li>&lt;li&gt;<span class="dmy">リスト3</span>&lt;/li&gt;</li>
+		</ul>
+		<div class="dmy-end">&lt;/ul&gt;</div>
+	</section>
+
+	<section>
+		<h2>wrapAll()</h2>
+		<pre>$('p').wrapAll('&lt;div /&gt;');</pre>
+		<p class="note2">* 一回しか実行できないようにしています</p>
+		<button id="method-wrapAll">wrapAll()</button>
+		<div class="wrap">
+			<p class="p">&lt;p&gt;要素1&lt;/p&gt;</p>
+			<p class="p">&lt;p&gt;要素2&lt;/p&gt;</p>
+			<p class="p">&lt;p&gt;要素&lt;/p&gt;</p>
+		</div>
+	</section>
+
+
+</div>
+
+
+
+</body>
+</html>
