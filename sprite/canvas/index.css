@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.character {
+	background: url(../images.png) 0 0 no-repeat #ccc;
+	height: 0;
+	overflow: hidden;
+	padding-top: 64px;
+	width: 64px;
+	margin: 100px auto 0;
+}
+

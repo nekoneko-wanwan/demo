@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.character {
+	background: url(../images.png) 0 0 no-repeat #ccc;
+	height: 0;
+	overflow: hidden;
+	padding-top: 64px;
+	width: 64px;
+}
+
+.is-position-0 { background-position: 0 0;}
+.is-position-1 { background-position: -64px 0;}
+.is-position-2 { background-position: -128px 0;}
+.is-position-3 { background-position: -192px 0;}
+.is-position-4 { background-position: -256px 0;}
+.is-position-5 { background-position: -320px 0;}
+.is-position-6 { background-position: -384px 0;}
+.is-position-7 { background-position: -448px 0;}

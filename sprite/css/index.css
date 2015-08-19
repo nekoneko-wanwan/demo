@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.character {
+	background: url(../images.png) 0 0 no-repeat #ccc;
+	height: 0;
+	overflow: hidden;
+	padding-top: 64px;
+	width: 64px;
+	margin: 100px auto 0;
+	animation: sprite1 0.5s steps(7, start) infinite;
+	-webkit-animation: sprite1 0.5s steps(7, start) infinite;
+}
+@keyframes sprite1 {
+	0%    {background-position: 0 0;}
+	100%  {background-position: -448px 0;}
+}
+@-webkit-keyframes sprite1 {
+	0%    {background-position: 0 0;}
+	100%  {background-position: -448px 0;}
+}
+
