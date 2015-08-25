@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.contents {
+	max-width: 1050px;
+}
+.desc {
+	margin: 20px 0;
+	font-size: 90%;
+}
+.desc span.g {
+	color: #eee;
+}
+.desc span.r {
+	color: red;
+}
+.slider {
+	margin: 30px 0;
+}
+.slider__title {
+	font-weight: bold;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.slider__name {
+	width: 30px;
+	display: inline-block;
+}
+.slider label {
+	display: block;
+}
+.slider__result {
+	color: blue;
+	font-style: oblique;
+	display: inline-block;
+	background-color: #f7f7f7;
+	margin-top: 10px;
+	padding: 0.2em .5em;
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	min-height: 300px;
+}
+pre {
+	background-color: #f7f7f7;
+	padding: 0.5em;
+	display: inline-block;
+}
+/*.centerPosition {
+	position: absolute;
+	z-index: 100;
+	background: rgba(255, 255, 255, 0.9);
+	left: 10px;
+	bottom: 10px;
+	font-size: 90%;
+	font-weight: bold;
+	color: #000;
+	padding: 0 0.3em;
+}*/
+#mySvg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+#myCanvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}

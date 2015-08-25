@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>ViewBox 動作確認</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="contents">
+		<form action="">
+		<h1>SVG ViewBoxの動作確認</h1>
+
+		<div class="slider is-viewport">
+			<div class="slider__title">viewPortの値（実際の表示エリアのサイズ）</div>
+			<label>
+				<span class="slider__name">w: </span>
+				<input type="range" min="10" value="500" max="1000" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<label>
+				<span class="slider__name">h: </span>
+				<input type="range" min="10" value="300" max="1000" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<div class="slider__result"></div>
+		</div>
+
+		<div class="slider is-viewbox">
+			<div class="slider__title">viewBoxの値</div>
+			<label>
+				<span class="slider__name">x: </span>
+				<input type="range" min="0" value="0" max="1000" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<label>
+				<span class="slider__name">y: </span>
+				<input type="range" min="0" value="0" max="1000" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<label>
+				<span class="slider__name">w: </span>
+				<input type="range" min="0" value="500" max="1000" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<label>
+				<span class="slider__name">h: </span>
+				<input type="range" min="0" value="300" max="1000" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<div class="slider__result"></div>
+		</div>
+
+		<div class="slider is-svg">
+			<div class="slider__title">SVG（Circle）の値</div>
+			<label>
+				<span class="slider__name">cx: </span>
+				<input type="range" min="0" value="10" max="500" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<label>
+				<span class="slider__name">cy: </span>
+				<input type="range" min="0" value="10" max="500" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<label>
+				<span class="slider__name">r: </span>
+				<input type="range" min="0" value="10" max="500" step="10"/>
+				<span class="slider__val"></span>
+			</label>
+			<div class="slider__result" id="svg-result"></div>
+			<div>※circleのcx, cyは中心座標を、rは半径を示す</div>
+		</div>
+
+		<div class="wrapper">
+			<svg id="mySvg" width="" height="" viewBox="">
+				<circle id="svgCircle" cx="" cy="" r="" fill="rgba(50,205,50, 0.6)" />
+			</svg>
+			<canvas id="myCanvas" width="" height=""></canvas>
+		</div><!-- /.wrapper -->
+
+		<div class="desc">
+			<span class="g">□</span>グレーマス: 10px × 10px <br> <span class="r">□</span>赤マス: 100px × 100px<br>
+		</div>
+
+
+<pre>
+■初期値
+
+&lt;svg width="500" height="300" viewBox="0 0 500 300"&gt;
+  &lt;circle cx="10" cy="10" r="10" fill="rgba(50,205,50, 0.6)" /&gt;
+&lt;/svg&gt;
+</pre>
+
+		</form>
+	</div><!-- /.contents -->
+
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
