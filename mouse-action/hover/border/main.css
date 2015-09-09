@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+section {
+	margin: 50px;
+}
+a {
+	display: inline-block;
+	color: #3498db;
+	text-decoration: none;
+}
+
+
+.button {
+	border: 1px solid #eee;
+	padding: 10px 40px;
+	position: relative;
+}
+
+
+/* Effect1
+ *************************************** */
+.change-border01::after,
+.change-border01::before,
+.change-border01__inner::after,
+.change-border01__inner::before {
+	background-color: #3498db;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 10;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+}
+.change-border01::after {
+	height: 1px;
+	left: -1px;
+	top: -1px;
+	width: 0px;
+}
+.change-border01::before {
+	bottom: -1px;
+	height: 1px;
+	right: -1px;
+	width: 0px;
+}
+.change-border01__inner::after {
+	bottom: -1px;
+	height: 0px;
+	left: -1px;
+	width: 1px;
+}
+.change-border01__inner::before {
+	height: 0px;
+	right: -1px;
+	top: -1px;
+	width: 1px;
+}
+
+/* hover */
+.change-border01:hover::after,
+.change-border01:hover::before {
+	width: 100%;
+	width: calc(100% + 1px);
+}
+.change-border01:hover .change-border01__inner::after,
+.change-border01:hover .change-border01__inner::before {
+	height: 100%;
+	height: calc(100% + 1px);
+}
+
+
+/* Effect2
+ *************************************** */
+.change-border02::after,
+.change-border02::before,
+.change-border02__inner::after,
+.change-border02__inner::before {
+	background-color: #3498db;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 10;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+}
+.change-border02::after {
+	height: 1px;
+	right: -1px;
+	top: -1px;
+	width: 0px;
+}
+.change-border02::before {
+	bottom: -1px;
+	height: 1px;
+	left: -1px;
+	width: 0px;
+}
+.change-border02__inner::after {
+	height: 0px;
+	left: -1px;
+	top: -1px;
+	width: 1px;
+}
+.change-border02__inner::before {
+	bottom: -1px;
+	height: 0px;
+	right: -1px;
+	width: 1px;
+}
+
+/* hover */
+.change-border02:hover::after,
+.change-border02:hover::before {
+	width: 100%;
+	width: calc(100% + 1px);
+}
+.change-border02:hover .change-border02__inner::after,
+.change-border02:hover .change-border02__inner::before {
+	height: 100%;
+	height: calc(100% + 1px);
+}
+
+
+
+/* Effect3
+ *************************************** */
+.change-border03::after,
+.change-border03::before,
+.change-border03__inner::after,
+.change-border03__inner::before {
+	background-color: #3498db;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 10;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+}
+.change-border03::after {
+	height: 1px;
+	left: -1px;
+	top: -1px;
+	width: 0px;
+	-webkit-transition-delay: .9s;
+}
+.change-border03::before {
+	bottom: -1px;
+	height: 1px;
+	right: -1px;
+	width: 0px;
+	-webkit-transition-delay: .3s;
+}
+.change-border03__inner::after {
+	bottom: -1px;
+	height: 0px;
+	left: -1px;
+	width: 1px;
+}
+.change-border03__inner::before {
+	height: 0px;
+	right: -1px;
+	top: -1px;
+	width: 1px;
+	-webkit-transition-delay: .6s;
+}
+
+/* hover */
+.change-border03:hover::after,
+.change-border03:hover::before {
+	width: 100%;
+	width: calc(100% + 1px);
+}
+.change-border03:hover .change-border03__inner::after,
+.change-border03:hover .change-border03__inner::before {
+	height: 100%;
+	height: calc(100% + 1px);
+}
+
+.change-border03:hover::after,
+.change-border03:hover::before,
+.change-border03:hover .change-border03__inner::after,
+.change-border03:hover .change-border03__inner::before {
+ transition:none;
+ -webkit-transition:none;
+}
+
+
