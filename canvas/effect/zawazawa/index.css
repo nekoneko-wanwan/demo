@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.wrapper > div {
+	margin-bottom: 50px;
+}
+.cap {
+	display: inline-block;
+	font-weight: bold;
+	background-color: #eee;
+	padding: 10px 20px;
+}
+canvas {
+	border: 1px solid #ccc;
+}
+.bg-black {
+	background-color: #000;
+}
+
+
+
+
