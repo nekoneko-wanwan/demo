@@ -8,8 +8,9 @@
  * @param {boolean} isBordering: 縁取りするかどうか
  *     黒文字の場合は白フチに、白文字の場合は黒フチに
  * @param {boolean} isColorBlack: 黒文字にするかどうか（falseで白文字）
+ * @param {boolean} isRightFlow: 右から流れるようにするか
  */
-var zawaMaker = function(cs, zawaNum, isBordering, isColorBlack ) {
+var zawaMaker = function(cs, zawaNum, isBordering, isColorBlack, isRightFlow ) {
     var ctx      = cs.getContext('2d');
     var csWidth  = cs.width;
     var csHeight = cs.height;
@@ -35,7 +36,7 @@ var zawaMaker = function(cs, zawaNum, isBordering, isColorBlack ) {
     ZawaZawa.prototype = {
         initialize: function() {
             this.scale     = getRandomInt(10, 5) / 10; // 1 ~ 0.5の倍率
-            this.width     = this.scale * 150;  // 元サイズを大体150pxくらいと規定
+            this.width     = this.scale * 160;  // 元サイズを大体150pxくらいと規定
             this.height    = this.scale * 60;   // 元サイズを大体60pxくらいと規定
             this.moveX     = getRandomInt(csWidth  - this.width, 0);
             this.moveY     = getRandomInt(csHeight - this.height, 0);
@@ -51,21 +52,40 @@ var zawaMaker = function(cs, zawaNum, isBordering, isColorBlack ) {
             ctx.globalAlpha = this.alpha;
         },
         update: function() {
-            /* scaleでサイズがズレているので、scaleした分を割った値をCanvasサイズとする */
+            /* scaleで座標軸がズレているので、scaleした分を割った値をCanvasサイズとする */
             var _csWidth = csWidth / this.scale;
 
-            /**
-             * Canvasサイズを超えたらX座標を左端に戻す
-             * ただしループっぽさを無くすため、scaleとY座標はランダムに変更
-             */
-            if (this.moveX > _csWidth) {
-                this.moveX = - this.width;
-                this.alpha = 0;
-                this.moveY = getRandomInt(csHeight - this.height, 0);
-                this.scale = getRandomInt(10, 5) / 10;
+            /* 流れる向きの条件分岐 */
+            if (isRightFlow) {
+                if (this.moveX + this.width + 50 < 0 ) {
+                    this.alpha = 0;
+                    this.moveX = _csWidth + this.width;
+
+                    /* scaleを変えるため再設定 */
+                    this.scale    = getRandomInt(10, 5) / 10;
+                    this.width    = this.scale * 160;
+                    this.height   = this.scale * 60;
+                    this.moveY    = getRandomInt(csHeight - this.height, 0);
+                    this.addMoveX = this.scale * 5;
+                } else {
+                    this.moveX -= this.addMoveX;
+                    this.alpha += 0.01;
+                }
             } else {
-                this.moveX += this.addMoveX;
-                this.alpha += 0.01;
+                if (this.moveX >_csWidth) {
+                    this.alpha = 0;
+                    this.moveX = - this.width;
+
+                    /* scaleを変えるため再設定 */
+                    this.scale    = getRandomInt(10, 5) / 10;
+                    this.width    = this.scale * 160;
+                    this.height   = this.scale * 60;
+                    this.moveY    = getRandomInt(csHeight - this.height, 0);
+                    this.addMoveX = this.scale * 5;
+                } else {
+                    this.moveX += this.addMoveX;
+                    this.alpha += 0.01;
+                }
             }
 
             /* 透明度が1以上の場合は透明度の増加を止める */
@@ -186,9 +206,9 @@ var cs3 = document.getElementById('myCanvas3');
 var cs4 = document.getElementById('myCanvas4');
 
 
-/* args: canvasオブジェクト, ざわの数, 縁取りか, 黒文字か */
-zawaMaker(cs1, 10, false, true);
-zawaMaker(cs2, 10, true, true);
-zawaMaker(cs3, 10, false, false);
-zawaMaker(cs4, 10, true, false);
+/* args: canvasオブジェクト, ざわの数, 縁取りか, 黒文字か, 右から流すか */
+zawaMaker(cs1, 10, false, true, false);
+zawaMaker(cs2, 10, true, true, true);
+zawaMaker(cs3, 10, false, false, false);
+zawaMaker(cs4, 10, true, false, true);
 
