@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	position: relative;
+	background: url(bg.jpg) 0px 0px no-repeat #fff;
+	/*background-size: cover;*/
+	height: 500px;
+	width: 600px;
+}
+.text {
+	position: absolute;
+	top: 110px;
+	z-index: 100;
+}
+.text.is-one {
+	left: 195px;
+}
+.text.is-two {
+	left: 145px;
+}
+.text.is-three {
+	left: 90px;
+}
+.text span {
+	display: block;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1;
+	text-align: center;
+}
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+

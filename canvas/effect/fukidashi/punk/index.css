@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	position: relative;
+	background: url(bg.jpg) 0px 0px no-repeat #fff;
+	background-size: cover;
+	height: 500px;
+	width: 600px;
+}
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
