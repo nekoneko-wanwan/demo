@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate.css Demo</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="wrapper">
+<h1>Animate.css Demo</h1>
+
+<p>生成には以下Sassライブラリを利用させていただきました。<br ><a href="https://github.com/geoffgraham/animate.scss" target="_blank">https://github.com/geoffgraham/animate.scss</a><br>そのため、サンプルコードはそのscssでの指定方法となります</p>
+
+
+
+
+
+<section>
+	<h1>attention-seekers</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block attention-seekers bounce">bounce</div>
+	<div class="block attention-seekers flash">flash</div>
+	<div class="block attention-seekers jello">jello</div>
+	<div class="block attention-seekers pulse">pulse</div>
+	<div class="block attention-seekers rubberBand">rubberBand</div>
+	<div class="block attention-seekers shake">shake</div>
+	<div class="block attention-seekers swing">swing</div>
+	<div class="block attention-seekers tada">tada</div>
+	<div class="block attention-seekers wobble">wobble</div>
+<pre>
+.attention-seekers.bounce._on {@include bounce();}
+.attention-seekers.flash._on {@include flash();}
+.attention-seekers.jello._on {@include jello();}
+.attention-seekers.pulse._on {@include pulse();}
+.attention-seekers.rubberBand._on {@include rubberBand();}
+.attention-seekers.shake._on {@include shake();}
+.attention-seekers.swing._on {@include swing();}
+.attention-seekers.tada._on {@include tada();}
+.attention-seekers.wobble._on {@include wobble();}
+</pre>
+</section>
+
+
+<section>
+	<h1>bouncing-entrances</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block bouncing-entrances bounceIn">bounceIn</div>
+	<div class="block bouncing-entrances bounceInDown">bounceInDown</div>
+	<div class="block bouncing-entrances bounceInUp">bounceInUp</div>
+	<div class="block bouncing-entrances bounceInLeft">bounceInLeft</div>
+	<div class="block bouncing-entrances bounceInRight">bounceInRight</div>
+<pre>
+.bouncing-entrances.bounceIn._on {@include bounceIn();}
+.bouncing-entrances.bounceInDown._on {@include bounceInDown();}
+.bouncing-entrances.bounceInUp._on {@include bounceInUp();}
+.bouncing-entrances.bounceInLeft._on {@include bounceInLeft();}
+.bouncing-entrances.bounceInRight._on {@include bounceInRight();}
+</pre>
+</section>
+
+
+<section>
+	<h1>bouncing-exits</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block bouncing-exits bounceOut">bounceOut</div>
+	<div class="block bouncing-exits bounceOutDown">bounceOutDown</div>
+	<div class="block bouncing-exits bounceOutUp">bounceOutUp</div>
+	<div class="block bouncing-exits bounceOutLeft">bounceOutLeft</div>
+	<div class="block bouncing-exits bounceOutRight">bounceOutRight</div>
+<pre>
+.bouncing-exits.bounceOut._on {@include bounceOut();}
+.bouncing-exits.bounceOutDown._on {@include bounceOutDown();}
+.bouncing-exits.bounceOutUp._on {@include bounceOutUp();}
+.bouncing-exits.bounceOutLeft._on {@include bounceOutLeft();}
+.bouncing-exits.bounceOutRight._on {@include bounceOutRight();}
+</pre>
+</section>
+
+
+<section>
+	<h1>fading-entrances</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block fading-entrances fadeIn">fadeIn</div>
+	<div class="block fading-entrances fadeInDown">fadeInDown</div>
+	<div class="block fading-entrances fadeInDownBig">fadeInDownBig</div>
+	<div class="block fading-entrances fadeInUp">fadeInUp</div>
+	<div class="block fading-entrances fadeInUpBig">fadeInUpBig</div>
+	<div class="block fading-entrances fadeInLeft">fadeInLeft</div>
+	<div class="block fading-entrances fadeInLeftBig">fadeInLeftBig</div>
+	<div class="block fading-entrances fadeInRight">fadeInRight</div>
+	<div class="block fading-entrances fadeInRightBig">fadeInRightBig</div>
+<pre>
+.fading-entrances.fadeIn._on {@include fadeIn();}
+.fading-entrances.fadeInDown._on {@include fadeInDown();}
+.fading-entrances.fadeInDownBig._on {@include fadeInDownBig();}
+.fading-entrances.fadeInUp._on {@include fadeInUp();}
+.fading-entrances.fadeInUpBig._on {@include fadeInUpBig();}
+.fading-entrances.fadeInLeft._on {@include fadeInLeft();}
+.fading-entrances.fadeInLeftBig._on {@include fadeInLeftBig();}
+.fading-entrances.fadeInRight._on {@include fadeInRight();}
+.fading-entrances.fadeInRightBig._on {@include fadeInRightBig();}
+</pre>
+</section>
+
+
+<section>
+	<h1>fading-exits</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block fading-exits fadeOut">fadeOut</div>
+	<div class="block fading-exits fadeOutDown">fadeOutDown</div>
+	<div class="block fading-exits fadeOutDownBig">fadeOutDownBig</div>
+	<div class="block fading-exits fadeOutUp">fadeOutUp</div>
+	<div class="block fading-exits fadeOutUpBig">fadeOutUpBig</div>
+	<div class="block fading-exits fadeOutLeft">fadeOutLeft</div>
+	<div class="block fading-exits fadeOutLeftBig">fadeOutLeftBig</div>
+	<div class="block fading-exits fadeOutRight">fadeOutRight</div>
+	<div class="block fading-exits fadeOutRightBig">fadeOutRightBig</div>
+<pre>
+.fading-exits.fadeOut._on {@include fadeOut();}
+.fading-exits.fadeOutDown._on {@include fadeOutDown();}
+.fading-exits.fadeOutDownBig._on {@include fadeOutDownBig();}
+.fading-exits.fadeOutUp._on {@include fadeOutUp();}
+.fading-exits.fadeOutUpBig._on {@include fadeOutUpBig();}
+.fading-exits.fadeOutLeft._on {@include fadeOutLeft();}
+.fading-exits.fadeOutLeftBig._on {@include fadeOutLeftBig();}
+.fading-exits.fadeOutRight._on {@include fadeOutRight();}
+.fading-exits.fadeOutRightBig._on {@include fadeOutRightBig();}
+</pre>
+</section>
+
+
+<section>
+	<h1>flippers</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block flippers flip">flip</div>
+	<div class="block flippers flipInX">flipInX</div>
+	<div class="block flippers flipInY">flipInY</div>
+	<div class="block flippers flipOutX">flipOutX</div>
+	<div class="block flippers flipOutY">flipOutY</div>
+<pre>
+.flippers.flip._on {@include flip();}
+.flippers.flipInX._on {@include flipInX();}
+.flippers.flipInY._on {@include flipInY();}
+.flippers.flipOutX._on {@include flipOutX();}
+.flippers.flipOutY._on {@include flipOutY();}
+</pre>
+</section>
+
+
+<section>
+	<h1>lightspeed</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block lightspeed lightSpeedIn">lightSpeedIn</div>
+	<div class="block lightspeed lightSpeedOut">lightSpeedOut</div>
+<pre>
+.lightspeed.lightSpeedIn._on {@include lightSpeedIn();}
+.lightspeed.lightSpeedOut._on {@include lightSpeedOut();}
+</pre>
+</section>
+
+
+<section>
+	<h1>rotating-entrances</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block rotating-entrances rotateInDownLeft">rotateInDownLeft</div>
+	<div class="block rotating-entrances rotateInDownRight">rotateInDownRight</div>
+	<div class="block rotating-entrances rotateInUpLeft">rotateInUpLeft</div>
+	<div class="block rotating-entrances rotateInUpRight">rotateInUpRight</div>
+<pre>
+.rotating-entrances.rotateInDownLeft._on {@include rotateInDownLeft(); }
+.rotating-entrances.rotateInDownRight._on {@include rotateInDownRight(); }
+.rotating-entrances.rotateInUpLeft._on {@include rotateInUpLeft(); }
+.rotating-entrances.rotateInUpRight._on {@include rotateInUpRight(); }
+</pre>
+</section>
+
+
+<section>
+	<h1>rotating-exits</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block rotating-exits rotateOutDownLeft">rotateOutDownLeft</div>
+	<div class="block rotating-exits rotateOutDownRight">rotateOutDownRight</div>
+	<div class="block rotating-exits rotateOutUpLeft">rotateOutUpLeft</div>
+	<div class="block rotating-exits rotateOutUpRight">rotateOutUpRight</div>
+<pre>
+.rotating-exits.rotateOutDownLeft._on {@include rotateOutDownLeft(); }
+.rotating-exits.rotateOutDownRight._on {@include rotateOutDownRight(); }
+.rotating-exits.rotateOutUpLeft._on {@include rotateOutUpLeft(); }
+.rotating-exits.rotateOutUpRight._on {@include rotateOutUpRight(); }
+</pre>
+</section>
+
+
+<section>
+	<h1>sliding-entrances</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block sliding-entrances slideInDown">slideInDown</div>
+	<div class="block sliding-entrances slideInUp">slideInUp</div>
+	<div class="block sliding-entrances slideInLeft">slideInLeft</div>
+	<div class="block sliding-entrances slideInRight">slideInRight</div>
+<pre>
+.sliding-entrances.slideInDown._on {@include slideInDown();}
+.sliding-entrances.slideInUp._on {@include slideInUp();}
+.sliding-entrances.slideInLeft._on {@include slideInLeft();}
+.sliding-entrances.slideInRight._on {@include slideInRight();}
+</pre>
+</section>
+
+
+<section>
+	<h1>sliding-exits</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block sliding-exits slideOutDown">slideOutDown</div>
+	<div class="block sliding-exits slideOutUp">slideOutUp</div>
+	<div class="block sliding-exits slideOutLeft">slideOutLeft</div>
+	<div class="block sliding-exits slideOutRight">slideOutRight</div>
+<pre>
+.sliding-exits.slideOutDown._on {@include slideOutDown();}
+.sliding-exits.slideOutUp._on {@include slideOutUp();}
+.sliding-exits.slideOutLeft._on {@include slideOutLeft();}
+.sliding-exits.slideOutRight._on {@include slideOutRight();}
+</pre>
+</section>
+
+
+<section>
+	<h1>specials</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block specials hinge">hinge</div>
+	<div class="block specials rollIn">rollIn</div>
+	<div class="block specials rollOut">rollOut</div>
+<pre>
+.specials.hinge._on {@include hinge();}
+.specials.rollIn._on {@include rollIn();}
+.specials.rollOut._on {@include rollOut();}
+</pre>
+</section>
+
+
+<section>
+	<h1>zooming-entrances</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block zooming-entrances zoomIn">zoomIn</div>
+	<div class="block zooming-entrances zoomInDown">zoomInDown</div>
+	<div class="block zooming-entrances zoomInUp">zoomInUp</div>
+	<div class="block zooming-entrances zoomInLeft">zoomInLeft</div>
+	<div class="block zooming-entrances zoomInRight">zoomInRight</div>
+<pre>
+.zooming-entrances.zoomIn._on {@include zoomIn();}
+.zooming-entrances.zoomInDown._on {@include zoomInDown();}
+.zooming-entrances.zoomInUp._on {@include zoomInUp();}
+.zooming-entrances.zoomInLeft._on {@include zoomInLeft();}
+.zooming-entrances.zoomInRight._on {@include zoomInRight();}
+</pre>
+</section>
+
+
+<section>
+	<h1>zooming-exits</h1>
+	<button>Animation Start (add '_on' class)</button>
+	<div class="block zooming-exits zoomOut">zoomOut</div>
+	<div class="block zooming-exits zoomOutDown">zoomOutDown</div>
+	<div class="block zooming-exits zoomOutUp">zoomOutUp</div>
+	<div class="block zooming-exits zoomOutLeft">zoomOutLeft</div>
+	<div class="block zooming-exits zoomOutRight">zoomOutRight</div>
+<pre>
+.zooming-exits.zoomOut._on {@include zoomOut();}
+.zooming-exits.zoomOutDown._on {@include zoomOutDown();}
+.zooming-exits.zoomOutUp._on {@include zoomOutUp();}
+.zooming-exits.zoomOutLeft._on {@include zoomOutLeft();}
+.zooming-exits.zoomOutRight._on {@include zoomOutRight();}
+</pre>
+</section>
+
+
+</div><!-- /.wrapper -->
+
+
+
+
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
