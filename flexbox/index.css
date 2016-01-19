@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Verdana, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+h2 {
+	font-size: 90%;
+	color: #34495e;
+	margin: 0 0 10px;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th,td {
+	font-size: 90%;
+	padding: 7px 10px;
+	vertical-align: top;
+}
+thead th, thead td {
+	background-color: #aaa;
+}
+th {
+	font-weight: normal;
+	white-space: nowrap;
+	width: 18%;
+	text-align: left;
+}
+tr:nth-child(even) > * {
+	background-color: #f7f7f7;
+}
+td {
+	border-left: 1px dashed #ccc;
+}
+select {
+	display: block;
+}
+select + select {
+	margin-top: 0.5em;
+}
+option:nth-child(even) {
+	background-color: #f7f7f7;
+}
+pre {
+	background-color: #FFFDE7;
+	color: #263238;
+	font-size: 90%;
+	padding: 10px;
+	line-height: 1.6;
+}
+.s-text {
+	font-size: 80%;
+	color: #999;
+}
+
+
+.container {
+	margin: 0 auto 50px;
+	width: 800px;
+}
+.select-area {
+	border: 2px solid #e74c3c;
+	padding: 20px;
+	margin: 20px 0;
+}
+.select-area > h2 {
+	color: #FF5722;
+}
+.select-area.is-item {
+	border-color: #2c3e50;
+}
+.select-area.is-item > h2 {
+	color: #2c3e50;
+}
+.select-area__block {
+	display: inline-block;
+	margin: 0 1em 1em 0;
+}
+
+.flexbox-container {
+	background-color: #e0e0e0;
+	opacity: 0;
+	transition: all .3s;
+}
+.flexbox-item {
+	box-sizing: border-box;
+	background-color: #4aa3df;
+	font-size: 90%;
+	margin: 20px 0;
+	padding: 10px;
+	color: #fff;
+	font-weight: bold;
+	transition: all .3s;
+}
+.flexbox-item:nth-child(2n) {
+	background-color: #2ecc71;
+}
+.flexbox-item:nth-child(3n) {
+	background-color: #9b59b6;
+}
+.flexbox-item:nth-child(4n) {
+	background-color: #e67e22;
+}
+.flexbox-item:nth-child(5n) {
+	background-color: #4aa3df;
+}
+
+/* flexbox-container modifier */
+.is-shown {
+	opacity: 1;
+}
+
+.is-min-height-0    {min-height: 0;}
+.is-min-height-200  {min-height: 200px;}
+.is-min-height-400  {min-height: 400px;}
+.is-min-height-600  {min-height: 600px;}
+.is-min-height-800  {min-height: 800px;}
+.is-min-height-1000 {min-height: 1000px;}
+
+.is-display-flex  {display: flex;}
+.is-display-inline {display: inline-flex;}
+
+.is-dir-row     {flex-direction: row;}
+.is-dir-row-rev {flex-direction: row-reverse;}
+.is-dir-col     {flex-direction: column;}
+.is-dir-col-rev {flex-direction: column-reverse;}
+
+.is-wrap-nowrap     {flex-wrap: nowrap;}
+.is-wrap-wrap       {flex-wrap: wrap;}
+.is-wrap-wrap-rev   {flex-wrap: wrap-reverse;}
+
+.is-justify-start   {justify-content: flex-start;}
+.is-justify-end     {justify-content: flex-end;}
+.is-justify-center  {justify-content: center;}
+.is-justify-between {justify-content: space-between;}
+.is-justify-around  {justify-content: space-around;}
+
+.is-align-items-stretch  {align-items: stretch;}
+.is-align-items-start    {align-items: flex-start;}
+.is-align-items-end      {align-items: flex-end;}
+.is-align-items-center   {align-items: center;}
+.is-align-items-baseline {align-items: baseline;}
+
+.is-align-content-stretch {align-content: stretch;}
+.is-align-content-start   {align-content: flex-start;}
+.is-align-content-end     {align-content: flex-end;}
+.is-align-content-center  {align-content: center;}
+.is-align-content-between {align-content: space-between;}
+.is-align-content-around  {align-content: space-around;}
+
+
+/* flexbox-itemに対して */
+.is-margin-0 .flexbox-item {margin: 0;}
+.is-margin-10 .flexbox-item {margin: 10px;}
+.is-margin-20 .flexbox-item {margin: 20px;}
+.is-margin-30 .flexbox-item {margin: 30px;}
+.is-margin-40 .flexbox-item {margin: 40px;}
+.is-margin-50 .flexbox-item {margin: 50px;}
+
+.is-width-100 .flexbox-item {width: 100px;}
+.is-width-150 .flexbox-item {width: 150px;}
+.is-width-200 .flexbox-item {width: 200px;}
+.is-width-250 .flexbox-item {width: 250px;}
+.is-width-300 .flexbox-item {width: 300px;}
+.is-width-350 .flexbox-item {width: 350px;}
+.is-width-400 .flexbox-item {width: 400px;}
+.is-width-450 .flexbox-item {width: 450px;}
+.is-width-500 .flexbox-item {width: 500px;}
+
+.is-item-order-0 {order: 0;}
+.is-item-order-1 {order: 1;}
+.is-item-order-2 {order: 2;}
+.is-item-order-3 {order: 3;}
+
+.is-item-grow-0 {flex-grow: 0;}
+.is-item-grow-1 {flex-grow: 1;}
+.is-item-grow-2 {flex-grow: 2;}
+.is-item-grow-3 {flex-grow: 3;}
+

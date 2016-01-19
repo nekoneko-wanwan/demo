@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+	<h1>flexbox動作確認用ページ</h1>
+	<small>※CSS Flexible Box Layout Module Level 1をベース（Update: 20160119）</small>
+	<div id="js-select-area">
+		<div class="select-area">
+			<h2>親要素（flexbox-container）に対する指定</h2>
+			<table>
+				<tr>
+					<th>min-height:</th>
+					<td>
+						<select name="min-height">
+							<option value="is-min-height-0" selected>0 (def)</option>
+							<option value="is-min-height-200">200px</option>
+							<option value="is-min-height-400">400px</option>
+							<option value="is-min-height-600">600px</option>
+							<option value="is-min-height-800">800px</option>
+							<option value="is-min-height-1000">1000px</option>
+						</select>
+					</td>
+					<td class="s-text">(align-contentの動作確認のために用意)</td>
+				</tr>
+				<tr>
+					<th>display:</th>
+					<td>
+						<select name="display">
+							<option value="is-display-flex" selected>flex</option>
+							<option value="is-display-inline">inilne-flex</option>
+						</select>
+					</td>
+					<td class="s-text">必ず指定する<br><small>*子要素は自動的にflexアイテムと見なされる</small></td>
+				</tr>
+				<tr>
+					<th>flex-direction:</th>
+					<td>
+						<select name="dir">
+							<option value="is-dir-row" selected>row (def)</option>
+							<option value="is-dir-row-rev">row-reverse</option>
+							<option value="is-dir-col">column</option>
+							<option value="is-dir-col-rev">column-reverse</option>
+						</select>
+					</td>
+					<td class="s-text">アイテムをどのように配置するか<br><small>*ショートハンド flex-flow: &lt;direction&gt; &lt;wrap&gt;;</small></td>
+				</tr>
+				<tr>
+					<th>flex-wrap:</th>
+					<td>
+						<select name="wrap">
+							<option value="is-wrap-nowrap" selected>nowrap (def)</option>
+							<option value="is-wrap-wrap">wrap</option>
+							<option value="is-wrap-wrap-rev">wrap-reverse</option>
+						</select>
+					</td>
+					<td class="s-text">アイテムを1行or複数行にするか<br><small>*ショートハンド flex-flow: &lt;direction&gt; &lt;wrap&gt;;</small></td>
+				</tr>
+				<tr>
+					<th>justify-content:</th>
+					<td>
+						<select name="justify">
+							<option value="is-justify-start" selected>flex-start (def)</option>
+							<option value="is-justify-end">flex-end</option>
+							<option value="is-justify-center">center</option>
+							<option value="is-justify-between">space-between</option>
+							<option value="is-justify-around">space-around</option>
+						</select>
+					</td>
+					<td class="s-text">アイテムの水平方向の揃え方</td>
+				</tr>
+				<tr>
+					<th>align-items:</th>
+					<td>
+						<select name="align-items">
+							<option value="is-align-items-stretch" selected>stretch (def)</option>
+							<option value="is-align-items-start">flex-start</option>
+							<option value="is-align-items-end">flex-end</option>
+							<option value="is-align-items-center">center</option>
+							<option value="is-align-items-baseline">baseline</option>
+						</select>
+					</td>
+					<td class="s-text">アイテムの垂直方向の揃え方</td>
+				</tr>
+				<tr>
+					<th>align-content:</th>
+					<td>
+						<select name="align-content">
+							<option value="is-align-content-stretch" selected>stretch (def)</option>
+							<option value="is-align-content-start">flex-start</option>
+							<option value="is-align-content-end">flex-end</option>
+							<option value="is-align-content-center">center</option>
+							<option value="is-align-content-between">space-between</option>
+							<option value="is-align-content-around">space-around</option>
+						</select>
+					</td>
+					<td class="s-text">各行の揃え方<br><small>*複数行あり親要素の方が高い場合に有効</small></td>
+				</tr>
+			</table>
+		<pre id="js-shorthand">
+		</pre>
+
+		</div><!-- ./select-area -->
+
+
+		<div class="select-area is-item">
+			<h2>子要素（flexbox-item）に対する共通の指定</h2>
+			<table>
+				<tr>
+					<th>margin:</th>
+					<td>
+						<select name="margin">
+							<option value="is-margin-0" selected>0 (def)</option>
+							<option value="is-margin-10">10px</option>
+							<option value="is-margin-20">20px</option>
+							<option value="is-margin-30">30px</option>
+							<option value="is-margin-40">40px</option>
+							<option value="is-margin-50">50px</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>width:</th>
+					<td>
+						<select name="width">
+							<option value="is-width-150" selected>150px (def)</option>
+							<option value="is-width-200">200px</option>
+							<option value="is-width-250">250px</option>
+							<option value="is-width-350">300px</option>
+							<option value="is-width-350">350px</option>
+							<option value="is-width-400">400px</option>
+							<option value="is-width-450">450px</option>
+							<option value="is-width-500">500px</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</div><!-- ./select-area -->
+	</div><!-- ./js-select-area -->
+
+	<div id="js-flexbox-container" class="flexbox-container">
+		<div class="flexbox-item">
+			<select name="item-order">
+				<option value="is-item-order-0" selected>order: 0; (def)</option>
+				<option value="is-item-order-1">order: 1;</option>
+				<option value="is-item-order-2">order: 2;</option>
+				<option value="is-item-order-3">order: 3;</option>
+			</select>
+			<select name="item-grow">
+				<option value="is-item-grow-0" selected>flex-grow: 0; (def)</option>
+				<option value="is-item-grow-1">flex-grow: 1;</option>
+				<option value="is-item-grow-2">flex-grow: 2;</option>
+				<option value="is-item-grow-3">flex-grow: 3;</option>
+			</select>
+			<br>1行カラム
+		</div>
+		<div class="flexbox-item">
+			<select name="item-order">
+				<option value="is-item-order-0" selected>order: 0; (def)</option>
+				<option value="is-item-order-1">order: 1;</option>
+				<option value="is-item-order-2">order: 2;</option>
+				<option value="is-item-order-3">order: 3;</option>
+			</select>
+			<select name="item-grow">
+				<option value="is-item-grow-0" selected>flex-grow: 0; (def)</option>
+				<option value="is-item-grow-1">flex-grow: 1;</option>
+				<option value="is-item-grow-2">flex-grow: 2;</option>
+				<option value="is-item-grow-3">flex-grow: 3;</option>
+			</select>
+			<br>2行<br>カラム
+		</div>
+		<div class="flexbox-item">
+			<select name="item-order">
+				<option value="is-item-order-0" selected>order: 0; (def)</option>
+				<option value="is-item-order-1">order: 1;</option>
+				<option value="is-item-order-2">order: 2;</option>
+				<option value="is-item-order-3">order: 3;</option>
+			</select>
+			<select name="item-grow-3">
+				<option value="is-item-grow-0" selected>flex-grow: 0; (def)</option>
+				<option value="is-item-grow-1">flex-grow: 1;</option>
+				<option value="is-item-grow-2">flex-grow: 2;</option>
+				<option value="is-item-grow-3">flex-grow: 3;</option>
+			</select>
+			<br>3行<br>カラ<br>ム
+		</div>
+		<div class="flexbox-item">
+			<select name="item-order">
+				<option value="is-item-order-0" selected>order: 0; (def)</option>
+				<option value="is-item-order-1">order: 1;</option>
+				<option value="is-item-order-2">order: 2;</option>
+				<option value="is-item-order-3">order: 3;</option>
+			</select>
+			<select name="item-grow">
+				<option value="is-item-grow-0" selected>flex-grow: 0; (def)</option>
+				<option value="is-item-grow-1">flex-grow: 1;</option>
+				<option value="is-item-grow-2">flex-grow: 2;</option>
+				<option value="is-item-grow-3">flex-grow: 3;</option>
+			</select>
+			<br>4行<br>カ<br>ラ<br>ム
+		</div>
+	</div>
+
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="./index.js"></script>
+
+
+</body>
+</html>
