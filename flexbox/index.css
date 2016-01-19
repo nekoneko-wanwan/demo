@@ -90,7 +90,6 @@ pre {
 	background-color: #e0e0e0;
 	opacity: 0;
 	transition: all .3s;
-	width: 100%;
 }
 .flexbox-item {
 	box-sizing: border-box;
@@ -294,6 +293,7 @@ pre {
 .is-margin-40 .flexbox-item {margin: 40px;}
 .is-margin-50 .flexbox-item {margin: 50px;}
 
+.is-width-auto .flexbox-item {width: auto;}
 .is-width-100 .flexbox-item {width: 100px;}
 .is-width-150 .flexbox-item {width: 150px;}
 .is-width-200 .flexbox-item {width: 200px;}
@@ -303,6 +303,7 @@ pre {
 .is-width-400 .flexbox-item {width: 400px;}
 .is-width-450 .flexbox-item {width: 450px;}
 .is-width-500 .flexbox-item {width: 500px;}
+.is-width-100per .flexbox-item {width: 100%;}
 
 
 .is-item-order-0 {
