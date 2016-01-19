@@ -1,9 +1,15 @@
 @charset "UTF-8";
 
+html, body {
+	height: 100%;
+}
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Verdana, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Verdana, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+h1 {
+	margin: 10px 0;
 }
 h2 {
 	font-size: 90%;
@@ -16,7 +22,7 @@ table {
 }
 th,td {
 	font-size: 90%;
-	padding: 7px 10px;
+	padding: 5px 10px;
 	vertical-align: top;
 }
 thead th, thead td {
@@ -48,7 +54,8 @@ pre {
 	color: #263238;
 	font-size: 90%;
 	padding: 10px;
-	line-height: 1.6;
+	line-height: 1.4;
+	margin: 10px 0 0;
 }
 .s-text {
 	font-size: 80%;
@@ -62,7 +69,7 @@ pre {
 }
 .select-area {
 	border: 2px solid #e74c3c;
-	padding: 20px;
+	padding: 10px;
 	margin: 20px 0;
 }
 .select-area > h2 {
@@ -83,16 +90,18 @@ pre {
 	background-color: #e0e0e0;
 	opacity: 0;
 	transition: all .3s;
+	width: 100%;
 }
 .flexbox-item {
 	box-sizing: border-box;
 	background-color: #4aa3df;
 	font-size: 90%;
 	margin: 20px 0;
-	padding: 10px;
+	padding: 5px;
 	color: #fff;
 	font-weight: bold;
 	transition: all .3s;
+	overflow: hidden;
 }
 .flexbox-item:nth-child(2n) {
 	background-color: #2ecc71;
@@ -112,12 +121,12 @@ pre {
 	opacity: 1;
 }
 
-.is-min-height-0    {min-height: 0;}
-.is-min-height-200  {min-height: 200px;}
-.is-min-height-400  {min-height: 400px;}
-.is-min-height-600  {min-height: 600px;}
-.is-min-height-800  {min-height: 800px;}
-.is-min-height-1000 {min-height: 1000px;}
+.is-height-100per  {height: 100%;}
+.is-height-200  {height: 200px;}
+.is-height-400  {height: 400px;}
+.is-height-600  {height: 600px;}
+.is-height-800  {height: 800px;}
+.is-height-1000 {height: 1000px;}
 
 .is-display-flex {
 	display: -webkit-box;
@@ -345,4 +354,35 @@ pre {
 	-webkit-flex-grow: 3;
 	    -ms-flex-positive: 3;
 	        flex-grow: 3;
+}
+
+.is-align-self-auto {
+	-webkit-align-self: auto;
+	    -ms-flex-item-align: auto;
+	        align-self: auto;
+}
+.is-align-self-start {
+	-webkit-align-self: flex-start;
+	    -ms-flex-item-align: start;
+	        align-self: flex-start;
+}
+.is-align-self-end {
+	-webkit-align-self: flex-end;
+	    -ms-flex-item-align: end;
+	        align-self: flex-end;
+}
+.is-align-self-center {
+	-webkit-align-self: center;
+	    -ms-flex-item-align: center;
+	        align-self: center;
+}
+.is-align-self-baseline {
+	-webkit-align-self: baseline;
+	    -ms-flex-item-align: baseline;
+	        align-self: baseline;
+}
+.is-align-self-stretch {
+	-webkit-align-self: stretch;
+	    -ms-flex-item-align: stretch;
+	        align-self: stretch;
 }

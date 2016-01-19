@@ -2,31 +2,31 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>flexbox動作確認ページ</title>
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
 
 <div class="container">
-	<h1>flexbox動作確認用ページ</h1>
+	<h1>flexbox動作確認ページ</h1>
 	<small>※CSS Flexible Box Layout Module Level 1をベース（Update: 20160119）</small>
 	<div id="js-select-area">
 		<div class="select-area">
 			<h2>親要素（flexbox-container）に対する指定</h2>
 			<table>
 				<tr>
-					<th>min-height:</th>
+					<th>height:</th>
 					<td>
-						<select name="min-height">
-							<option value="is-min-height-0" selected>0 (def)</option>
-							<option value="is-min-height-200">200px</option>
-							<option value="is-min-height-400">400px</option>
-							<option value="is-min-height-600">600px</option>
-							<option value="is-min-height-800">800px</option>
-							<option value="is-min-height-1000">1000px</option>
+						<select name="height">
+							<option value="is-height-100per" selected>100%</option>
+							<option value="is-height-200">200px</option>
+							<option value="is-height-400">400px</option>
+							<option value="is-height-600">600px</option>
+							<option value="is-height-800">800px</option>
+							<option value="is-height-1000">1000px</option>
 						</select>
 					</td>
-					<td class="s-text">(align-contentの動作確認のために用意)</td>
+					<td class="s-text"><small>*組み合わせによってはレイアウトが崩れるので注意</small></td>
 				</tr>
 				<tr>
 					<th>display:</th>
@@ -48,7 +48,7 @@
 							<option value="is-dir-col-rev">column-reverse</option>
 						</select>
 					</td>
-					<td class="s-text">アイテムをどのように配置するか<br><small>*ショートハンド flex-flow: &lt;direction&gt; &lt;wrap&gt;;</small></td>
+					<td class="s-text">アイテムをどの方向に並べるか（水平・垂直）<br><small>*ショートハンド flex-flow: &lt;direction&gt; &lt;wrap&gt;;</small></td>
 				</tr>
 				<tr>
 					<th>flex-wrap:</th>
@@ -72,7 +72,7 @@
 							<option value="is-justify-around">space-around</option>
 						</select>
 					</td>
-					<td class="s-text">アイテムの水平方向の揃え方</td>
+					<td class="s-text">directionに沿ったアイテムの水平の揃え方</td>
 				</tr>
 				<tr>
 					<th>align-items:</th>
@@ -85,7 +85,7 @@
 							<option value="is-align-items-baseline">baseline</option>
 						</select>
 					</td>
-					<td class="s-text">アイテムの垂直方向の揃え方</td>
+					<td class="s-text">directionに沿ったアイテムの垂直の揃え方</td>
 				</tr>
 				<tr>
 					<th>align-content:</th>
@@ -159,6 +159,14 @@
 				<option value="is-item-grow-2">flex-grow: 2;</option>
 				<option value="is-item-grow-3">flex-grow: 3;</option>
 			</select>
+			<select name="align-self">
+				<option value="is-align-self-auto" selected>align-self: auto; (def)</option>
+				<option value="is-align-self-start">align-self: flex-start;</option>
+				<option value="is-align-self-end">align-self: flex-end;</option>
+				<option value="is-align-self-center">align-self: center;</option>
+				<option value="is-align-self-baseline">align-self: baseline;</option>
+				<option value="is-align-self-stretch">align-self: stretch;</option>
+			</select>
 			<br>1行カラム
 		</div>
 		<div class="flexbox-item">
@@ -173,6 +181,14 @@
 				<option value="is-item-grow-1">flex-grow: 1;</option>
 				<option value="is-item-grow-2">flex-grow: 2;</option>
 				<option value="is-item-grow-3">flex-grow: 3;</option>
+			</select>
+			<select name="align-self">
+				<option value="is-align-self-auto" selected>align-self: auto; (def)</option>
+				<option value="is-align-self-start">align-self: flex-start;</option>
+				<option value="is-align-self-end">align-self: flex-end;</option>
+				<option value="is-align-self-center">align-self: center;</option>
+				<option value="is-align-self-baseline">align-self: baseline;</option>
+				<option value="is-align-self-stretch">align-self: stretch;</option>
 			</select>
 			<br>2行<br>カラム
 		</div>
@@ -189,6 +205,14 @@
 				<option value="is-item-grow-2">flex-grow: 2;</option>
 				<option value="is-item-grow-3">flex-grow: 3;</option>
 			</select>
+			<select name="align-self">
+				<option value="is-align-self-auto" selected>align-self: auto; (def)</option>
+				<option value="is-align-self-start">align-self: flex-start;</option>
+				<option value="is-align-self-end">align-self: flex-end;</option>
+				<option value="is-align-self-center">align-self: center;</option>
+				<option value="is-align-self-baseline">align-self: baseline;</option>
+				<option value="is-align-self-stretch">align-self: stretch;</option>
+			</select>
 			<br>3行<br>カラ<br>ム
 		</div>
 		<div class="flexbox-item">
@@ -203,6 +227,14 @@
 				<option value="is-item-grow-1">flex-grow: 1;</option>
 				<option value="is-item-grow-2">flex-grow: 2;</option>
 				<option value="is-item-grow-3">flex-grow: 3;</option>
+			</select>
+			<select name="align-self">
+				<option value="is-align-self-auto" selected>align-self: auto; (def)</option>
+				<option value="is-align-self-start">align-self: flex-start;</option>
+				<option value="is-align-self-end">align-self: flex-end;</option>
+				<option value="is-align-self-center">align-self: center;</option>
+				<option value="is-align-self-baseline">align-self: baseline;</option>
+				<option value="is-align-self-stretch">align-self: stretch;</option>
 			</select>
 			<br>4行<br>カ<br>ラ<br>ム
 		</div>

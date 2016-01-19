@@ -41,7 +41,7 @@
 	 * @param {hash} {property: val,...}形式で渡す
 	 */
 	var showSelectedStyle = function(hash) {
-		var str = '/* flexbox関連のみ */\n' + CONTAINER_CLASS_NAME + ' ' + JSON.stringify(hash, null, '    ');
+		var str = '/* flexbox関連のみ, prefixは省略 */\n' + CONTAINER_CLASS_NAME + ' ' + JSON.stringify(hash, null, '    ');
 		str = str.replace(/\"/g, '');
 		str = str.replace(/,/g, '');
 		$('#js-shorthand').html(str);
